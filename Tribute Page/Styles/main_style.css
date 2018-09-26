@@ -1,0 +1,97 @@
+body {
+	margin: 0vw;
+	width: 100vw;
+}
+
+div {
+	margin: 0vw;
+	padding: 0vw;
+	background-color: white;
+	color: black;
+	font-size: 2vw;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+#container {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: 100vw;
+    grid-template-rows: 85vh auto auto auto;
+    grid-gap: 0vw;    
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+}
+
+#coverImg {
+	grid-area: header;
+	background-image: url('../Images/ada_lovelace.png');
+ 	background-position: center; 
+  	background-repeat: no-repeat; 
+  	background-size: cover; 
+}
+
+#nav {
+	grid-area: nav;
+	display: grid;
+	grid-template-columns: 30vw 70vw;
+	grid-template-rows: auto;
+	grid-gap: 0vw;    
+    grid-template-areas:
+      "signature buttons";
+    background-color: #bd1900;
+}
+
+#headline {
+	grid-area: signature;
+	padding: 1vw;	
+}
+
+.navBtn {
+	grid-area: buttons;
+	background-color: #bd1900;
+	padding: 1vw;
+}
+
+.navButton {
+	background-color: #bd1900;
+	margin: 1vw;
+	padding: 1vw;
+	font-size: 2vw;
+	font-weight: bold;
+	border: none;
+}
+
+#main {
+	grid-area: main;
+	display: grid;
+	grid-template-columns: 50vw 50vw;
+	grid-template-rows: 20vw auto 10vw 10vw 10vw auto auto;
+	grid-row-gap: 0vw;
+	grid-template-areas: 
+		"title title"
+		"mainImage mainImage"
+		"contentImageOne contentTextOne"
+		"contentTextTwo contentImageTwo"
+		"contentImageThree contentTextThree"
+		"adaDay adaDay"
+		"adaBook adaBook"
+}
+
+#title {
+	grid-area: title;
+}
+
+#img-div {
+	grid-area: mainImage;
+}
+
+#tribute-info {
+	grid-area: contentTextOne;
+}
+
+
+
