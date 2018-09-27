@@ -90,14 +90,13 @@ a:hover {
 	font-family: 'Great Vibes', cursive;
 	text-align: left;
 	font-size: 2.5vw;
-	padding: 0.75vw;
+	padding: 0.25vw;
 	margin-left: 4vw;	
 }
 
 #navBtn {
 	grid-area: buttons;
 	background-color: #bd1900;
-	padding: 1vw;
 	margin-right: 3vw;
 }
 
@@ -105,8 +104,8 @@ a:hover {
 	background-color: #bd1900;
 	color: #ffd6d7;
 	margin: 1vw;
-	padding-top: 1.5vw;
-	padding-bottom: 1.5vw;
+	padding-top: 2vw;
+	padding-bottom: 2vw;
 	font-size: 2vw;
 	font-weight: bold;
 	border: none;
