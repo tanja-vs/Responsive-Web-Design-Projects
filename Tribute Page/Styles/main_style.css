@@ -6,32 +6,59 @@ body {
 div {
 	margin: 0vw;
 	padding: 0vw;
-	background-color: white;
+	background-color: #ffd6d7;
 	color: black;
-	font-size: 2vw;
+	font-size: 1.7vw;
 	font-family: sans-serif;
 	text-align: center;
+}
+
+.imageStyle1 {
+	background-position: center; 
+  	background-repeat: no-repeat; 
+  	background-size: cover;
+    background-attachment: fixed;
+}
+
+.imageStyle2 {
+	background-position: center; 
+  	background-repeat: no-repeat; 
+  	background-size: cover;
+}
+
+.text {
+	background-color: #ffd6d7;
+	padding: 2vw;
+}
+
+h1 {
+	font-size: 7vw;
+	padding: 15vw;
+	opacity: 1;
 }
 
 #container {
 	width: 100vw;
 	display: grid;
 	grid-template-columns: 100vw;
-    grid-template-rows: 85vh auto auto auto;
+    grid-template-rows: 85vh auto auto 30vw auto auto auto auto auto auto;
     grid-gap: 0vw;    
     grid-template-areas:
       "header"
       "nav"
       "main"
+      "gap"
+      "adaDayImg"
+      "adaDayText"
+      "adaBookImg"
+      "adaBookText"
+      "social"
       "footer";
 }
 
 #coverImg {
 	grid-area: header;
 	background-image: url('../Images/ada_lovelace.png');
- 	background-position: center; 
-  	background-repeat: no-repeat; 
-  	background-size: cover; 
 }
 
 #nav {
@@ -43,14 +70,19 @@ div {
     grid-template-areas:
       "signature buttons";
     background-color: #bd1900;
+    color: #ffd6d7;
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 
 #headline {
 	grid-area: signature;
-	padding: 1vw;	
+	font-size: 2.5vw;
+	padding: 0.75vw	
 }
 
-.navBtn {
+#navBtn {
 	grid-area: buttons;
 	background-color: #bd1900;
 	padding: 1vw;
@@ -58,39 +90,120 @@ div {
 
 .navButton {
 	background-color: #bd1900;
+	color: #ffd6d7;
 	margin: 1vw;
-	padding: 1vw;
+	padding-top: 1.5vw;
+	padding-bottom: 1.5vw;
 	font-size: 2vw;
 	font-weight: bold;
 	border: none;
+}
+
+.navButton:hover {
+	color: #e69394;
 }
 
 #main {
 	grid-area: main;
 	display: grid;
 	grid-template-columns: 50vw 50vw;
-	grid-template-rows: 20vw auto 10vw 10vw 10vw auto auto;
+	grid-template-rows: auto 55vw 65vw 40vw 65vw;
 	grid-row-gap: 0vw;
 	grid-template-areas: 
-		"title title"
-		"mainImage mainImage"
-		"contentImageOne contentTextOne"
-		"contentTextTwo contentImageTwo"
-		"contentImageThree contentTextThree"
-		"adaDay adaDay"
-		"adaBook adaBook"
+		"titleDiv titleDiv"
+		"img-div img-div"
+		"contentTextOne contentImageOne"
+		"contentImageTwo contentTextTwo"
+		"contentTextThree contentImageThree"
 }
 
-#title {
-	grid-area: title;
+#titleDiv {
+	grid-area: titleDiv;
 }
 
 #img-div {
-	grid-area: mainImage;
+	grid-area: img-div;
+	background-color: #bd1900;
+    color: #ffd6d7;
+    padding: 5vw;
 }
 
-#tribute-info {
+#image {
+	display: block;
+	height: 95%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#image1 {
+	grid-area: contentImageOne;
+	background-image: url('../Images/ada1.jpg'); 
+}
+
+#text1 {
 	grid-area: contentTextOne;
+}
+
+#image2 {
+	grid-area: contentImageTwo;
+	background-image: url('../Images/ada2.jpg');
+}
+
+#text2 {
+	grid-area: contentTextTwo;
+}
+
+#image3 {
+	grid-area: contentImageThree;
+	background-image: url('../Images/ada3.jpg');
+}
+
+#text3 {
+	grid-area: contentTextThree;
+}
+
+#gap {
+	grid-area: gap;
+	background-color: #e69394;
+}
+
+.layer {
+	background-color: #0058bd;
+	color: #ffd6d7;
+	opacity: 0.6;
+	padding: 1vw;
+}
+
+#adaDayImg {
+	grid-area: adaDayImg;
+	background-image: url('../Images/ada_lovelace_day.jpg');
+}
+
+#adaDayText {
+	grid-area: adaDayText;
+}
+
+#adaBookImg {
+	grid-area: adaBookImg;
+	background-image: url('../Images/book1.jpg');
+}
+
+#adaBookText {
+	grid-area: adaBookText;
+}
+
+#social {
+	grid-area: social;
+	background-color: #bd1900;
+	padding: 3vw;
+}
+
+#footer {
+	grid-area: footer;
+	padding: 5vw;
+	padding-top: 13vw;
+	background-color: #e69394;
+	color: #bd1900;
 }
 
 
