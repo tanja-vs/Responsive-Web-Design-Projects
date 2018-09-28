@@ -2,7 +2,7 @@ body {
 	margin: 0vw;
 }
 
-div {
+.divDesign {
 	margin: 0vw;
 	padding: 0vw;
 	max-width: 100vw;
@@ -95,14 +95,14 @@ a:hover {
 	text-align: left;
 	font-size: 2.5vw;
 	padding: 0.25vw;
-	margin-left: 4vw;	
+	margin-left: 5vw;	
 }
 
 #navBtn {
 	grid-area: buttons;
 	background-color: #bd1900;
 	text-align: right;
-	margin-right: 4vw;
+	margin-right: 5vw;
 }
 
 .navButton {
@@ -118,6 +118,10 @@ a:hover {
 
 .navButton:hover {
 	color: #e69394;
+}
+
+#sel {
+	display: none;
 }
 
 #main {
@@ -227,7 +231,6 @@ a:hover {
 
 .fa {
 	color: #e69394;
-	font-size: 5vw;
 	padding: 1vw;
 }
 
@@ -243,7 +246,53 @@ a:hover {
 	color: #0058bd;
 }
 
-@media
+@media only screen and (max-width: 600px) {
+	.divDesign {
+		font-size: 3.5vw;
+	}
+
+	.text {
+		padding: 4vw;
+	}
+
+	#nav {
+		grid-template-columns: 50vw 50vw;
+	}
+
+	#headline {
+		font-size: 5vw;
+	}
+
+	.navButton {
+		display: none;
+	}
+
+	#sel {
+		display: inline-block;
+		grid-area: buttons;
+		background-color: #bd1900;
+		color: #ffd6d7;
+		text-align: right;
+		font-size: 3vw;
+		font-weight: bold;
+		border: none;
+		margin-right: 5vw;
+	}
+
+	.opt {
+		color: #ffd6d7;
+		font-size: 3vw;
+		font-weight: bold;
+	}
+
+	#image {
+		height: 70%;
+	}
+
+	#social {
+		font-size: 5vw;
+	}
+} 
 
 
 
