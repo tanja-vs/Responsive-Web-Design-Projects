@@ -1,13 +1,13 @@
 body {
 	margin: 0vw;
-	width: 100vw;
 }
 
 div {
 	margin: 0vw;
 	padding: 0vw;
+	max-width: 100vw;
 	background-color: #ffd6d7;
-	color: #bd1900;
+	color: #4a4949;
 	font-size: 1.7vw;
 	font-family: 'Nanum Gothic', sans-serif;
 	text-align: center;
@@ -31,14 +31,14 @@ div {
 	padding: 2vw;
 }
 
-h1 {
+.headline1 {
 	font-size: 7vw;
 	padding: 14vw;
 	opacity: 1;
 }
 
-p {
-	color: #4a4949;
+.headline3 {
+	color: #bd1900;
 }
 
 a {
@@ -242,6 +242,8 @@ a:hover {
 	background-color: #e69394;
 	color: #0058bd;
 }
+
+@media
 
 
 
