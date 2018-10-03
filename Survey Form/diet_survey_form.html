@@ -4,82 +4,108 @@
   
 <head>
   <title>How healthy is your diet?</title>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
   
   <meta charset="UTF-8">
   <meta name="description" content="Diet Survey Form">
   <meta name="keywords" content="health, diet, nutrition, fruits, vegetables, vitamins, minerals, protein, fat, carbs">
   <meta name="author" content="Tanja Veljanovska-Saveska"> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
-  
+
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>  
 </head>
 
 <body>
+<div id="container">
+<div id="layer">
+<div id="main">
   <h1 id="title">HOW HEALTHY IS YOUR DIET?</h1>
-  <p id="description">This questionnaire is designed to allow
-you to assess the nutritional value of your
-diet. Answer yes or no to the questions
-below and then read the supplementary
-information that will help you to consider
-    making changes to your diet.</p>
+  <p id="description">This survey-form is designed to assess the nutritional value of your
+diet.</p>
 
   <form id="survey-form" action="/action_page.php">
-  <label id="name-label">Name:<br>
-  <input id="name" type="text"  required name="firstname" placeholder="Enter your first name"></label>
-  <br>
-  <label id="email-label">
-  E-mail:<br>
-    <input id="email" type="email" required name="email" placeholder="Enter your e-mail"></label>
-  <br>
+    <label id="name-label">Name: 
+    <input id="name" type="text"  required name="firstname" placeholder="Enter your first name">
+    </label>
+    <br>
+    <br>
+    
+    <label id="email-label">
+    E-mail: 
+    <input id="email" type="email" required name="email" placeholder="Enter your e-mail">
+    </label>
+    <br>
+    <br>
+
     <label id="number-label">
-  Age:<br>
-  <input id="number" type="number" required name="quantity" min="12" max="150" placeholder="Enter your age">  </label>
-  <br>
-  Sex: <br>
-  <input type="radio" name="gender" value="male" checked> Male<br>
-  <input type="radio" name="gender" value="female"> Female<br>
-      <input type="radio" name="gender" value="other"> Other<br>
-  Height:<br>
-  <input id="number" type="number" name="quantity" min="100" max="300" placeholder="Enter your height">
+    Age: 
+    <input id="number" type="number" required name="quantity" min="12" max="150" placeholder="Enter your age">  
+    </label>
     <br>
-  Weight:<br>
-  <input id="number" type="number" name="quantity" min="25" max="300" placeholder="Enter your weight">  
-  <br>
+    <br>
 
-  Life style:
-  <select id="dropdown" name="lifestyle">
-    <option value="sedentary">sedentary</option>
-    <option value="little active">somewhat active</option>
-    <option value="active">active</option>
-    <option value="veryActive">very active</option>
-  </select>
+    <label id="sex-label">
+    Sex: 
+    <input type="radio" name="gender" value="male" checked> Male 
+    <input type="radio" name="gender" value="female"> Female 
+    <input type="radio" name="gender" value="other"> Other 
+    </label>
     <br>
-    Are/Were you recently on some type of diet? <br>
-      <input type="checkbox" name="diet1" value="vegan">I am/was on vegan diet<br>
-  <input type="checkbox" name="diet2" value="vegetarian"> I am/was on vegetarian diet 
-  <br>
-    <input type="checkbox" name="diet3" value="paleo"> I am/was on paleo diet 
-  <br>
-    <input type="checkbox" name="diet4" value="atkins"> I am/was on Atkins diet 
-  <br>
-    <input type="checkbox" name="diet5" value="chrono"> I am/was on chrono diet 
-  <br>
-    <input type="checkbox" name="diet5" value="other"> I am/was on other diet 
     <br>
-    <input type="checkbox" name="diet5" value="chrono"> I am/was on chrono diet 
-  <br>
-  Do you have anything to add?<br>
- <textarea name="message" rows="10" cols="30">
-The cat was playing in the garden.
-</textarea>
+
+    <label id="height-label">
+    Height: 
+    <input id="number" type="number" name="quantity" min="100" max="300" placeholder="Enter your height">
+    </label>
     <br>
-  <input id="submit" type="submit" value="Submit">
+    <br>
+
+    <label id="weight">
+    Weight: 
+    <input id="number" type="number" name="quantity" min="25" max="300" placeholder="Enter your weight">
+    </label>  
+    <br>
+    <br>
+
+    <label id="lifestyle">
+    Lifestyle:
+    <select id="dropdown" name="lifestyle">
+      <option value="sedentary">sedentary</option>
+      <option value="little active">somewhat active</option>
+      <option value="active">active</option>
+      <option value="veryActive">very active</option>
+    </select>
+    </label>
+    <br>
+    <br>
+
+    <label id="diets">
+    Were you recently/Are you on some type of diet? <br>
+    <input type="checkbox" name="diet1" value="vegan"> I am/was on vegan diet<br>
+    <input type="checkbox" name="diet2" value="vegetarian"> I am/was on vegetarian diet<br>
+    <input type="checkbox" name="diet3" value="paleo"> I am/was on paleo diet<br>
+    <input type="checkbox" name="diet4" value="atkins"> I am/was on Atkins diet<br>
+    <input type="checkbox" name="diet5" value="chrono"> I am/was on chrono diet<br>
+    <input type="checkbox" name="diet5" value="other"> I am/was on other diet<br>
+    <input type="checkbox" name="diet5" value="chrono"> I am/was on chrono diet<br>
+    </label>
+    <br>
+
+    <label id="comment">
+    Do you have anything to add?<br>
+    <textarea name="message" rows="10" cols="30" placeholder="Add your comment here">
+    </textarea>
+    </label>
+    <br>
+    <br>
+
+    <input id="submit" type="submit" value="Submit">
 </form> 
-<!-- 
-User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
 
--->
+</div>
+</div>
+</div>
 </body>  
 
 </html>
