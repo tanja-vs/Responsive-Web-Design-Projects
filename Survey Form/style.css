@@ -31,14 +31,55 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	padding: 5vw;
+	border-radius: 10vw;
 	z-index: 3;
 	font-size: 1.5vw;
 	text-align: center;
+	color: #454343;
+	font-family: 'Poppins', sans-serif;
+}
+
+#title {
+	font-family: 'Fahkwang', sans-serif;
+}
+
+#description {
+	font-size: 2.2vw;
+	color: #ff5f4d;
+	font-family: 'Fahkwang', sans-serif;
+}
+
+.design {
+	background-color: #6bd192;
+	border: none;
+	border-radius: 10vw;
+	width: 20vw;
+	padding: 0.3vw;
+	text-align: center;
+	color: #454343;
+	font-size: 1.5vw;
+	font-family: 'Poppins', sans-serif;
+}
+
+.numbers {
+	width: 10vw;
 }
 
 #submit {
 	background-color: #ff5f4d;
+	border: none;
+	border-radius: 10vw;
+	padding: 1.2vw;
+	font-size: 1.8vw;
+	color: #454343;
+	font-weight: bold;
+	font-family: 'Fahkwang', sans-serif;
 }
+
+#submit:hover {
+	color: #faf5f1;
+}
+
 
 
 
