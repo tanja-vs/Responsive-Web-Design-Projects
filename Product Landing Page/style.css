@@ -1,0 +1,189 @@
+body {
+	margin: 0vw;
+}
+
+#container {
+	margin: 0vw;
+	padding: 0vw;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 1.4vw;
+}
+
+#header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0vw;
+	padding: 1.2vw;
+	background-color: white;
+	color: black;
+	position: sticky;
+	top: 0;
+}
+
+#header-img {
+	height: 4vw; 
+	margin-left: 4vw;
+}
+
+#nav-bar {
+	margin-right: 4vw;
+}
+
+.nav-link {
+	background-color: white;
+	border-color: white;
+	border-style: solid;
+	margin-left: 2vw;
+	font-size: 1.8vw;
+	font-weight: bold;
+	padding: 0vw;
+}
+
+.nav-link:hover {
+	border-bottom-color: black;
+}
+
+#main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#products {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	max-width: 90vw;
+	height: auto;
+}
+
+.product {
+	height: 500px;
+	width: 250px;
+	margin-bottom: 5vw;
+}
+
+.product:hover {
+	height: 540px;
+	width: 270px;
+	background-color: white;
+	color: black;
+}
+
+.images {
+	height: 50%;
+	width: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+  	background-size:cover;
+}
+
+#img1 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/stella-mccartney-charcoal-velvet-curved-heel-ankle-bootie-gray-product-1-096085082-normal.jpeg');
+}
+
+#img2 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/44642841_001_0.jpg');
+}
+
+#img3 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/RIN-BLK-2T.jpg');
+}
+
+#img4 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/000735_4_1.jpg');
+}
+
+#img5 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/dora_001_hp.jpg');
+}
+
+#img6 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/anne-olive-cdc05.jpg');
+}
+
+#img7 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/Millenium-vegan-wedge-boots-from-Olsen-Haus.jpg');
+}
+
+#img8 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/8730390-1-black.jpg');
+}
+
+#img9 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/8388468-1-black.jpg');
+}
+
+#img10 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/939220_fr_pp.jpg');
+}
+
+#img11 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/8374732-1-burgundylycra.jpg');
+}
+
+#img12 {
+	background-image: url('https://eluxemagazine.com/wp-content/uploads/2015/11/IMG_4928.jpg');
+}
+
+.text {
+	padding: 0.5vw;
+}
+
+#footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0vw;
+	padding: 0.2vw;
+	background-color: white;
+	color: black;
+	font-size: 1.6vw;
+}
+
+#copyright {
+	margin-left: 4vw;
+}
+
+#social {
+	margin-right: 4vw;
+}
+
+@media screen and (max-width: 600px) {
+	#container {
+		font-size: 4vw;
+	}
+
+	#header-img {
+		height: 8vw; 
+	}
+
+	.nav-link {
+		font-size: 3vw;
+	}
+
+	.product {
+		height: auto;
+		width: 84vw;
+	}
+
+	.product:hover {
+		height: auto;
+		width: 88vw;
+	}
+
+	.images {
+		height: 84vw;
+	}
+
+	#footer {
+		font-size: 3vw;
+	}
+}
