@@ -28,7 +28,10 @@
 		
 		<main id="main">
 			<div id="about">
-				<iframe id="video" src="https://www.youtube.com/embed/hbz_nygkt6E"></iframe>	
+				<div>
+					<img id="coverImg" src="http://www.chikoshoes.com/wp-content/uploads/2017/12/best-ankle-boots-skinny-jeans-lookbook-1.jpg">
+					<iframe id="video" src="https://www.youtube.com/embed/hbz_nygkt6E"></iframe>
+				</div>	
 				<div id="description">
 					<p>With the rise of eco-friendly faux fur, there are hundreds of stylish, warm winter coats to choose from, but finding vegan boots to match is a bit trickier. Often, they’re a bit frumpy looking, or are made from material that doesn’t <q>breathe</q> well, making them either far from snuggly, or if they’re lined – sweatily stuffy. <strong>The eternal winter problem for vegans is usually:</strong> <em>where can I find a decent pair of vegan boots?</em>
 					</p>
@@ -152,9 +155,25 @@
 			</div>
 
 			<div id="contact">
+				<h2>We'd love to chat</h2>
+				<h4>Send us a message</h4>
+				
 				<form id="form">
-					<input id="email" type="email" name="mail" placeholder="Enter your e-mail here">
-					<button id="submit" type="submit" href="https://www.freecodecamp.com/email-submit">Subscribe</button>
+					<br>
+					Name:
+					<br> 
+					<input class="input" type="text" name="name" placeholder="Enter your name here" required>
+					<br>
+					E-mail:
+					<br>
+					<input class="input" id="email" type="email" name="mail" placeholder="Enter your e-mail here" required>
+					<br>
+					Message: 
+					<br>
+					<textarea class="input" name="message" rows="5">
+					</textarea>
+					<br>
+					<input id="submit" type="submit" value="SEND">
 				</form>
 			</div>
 		</main>
