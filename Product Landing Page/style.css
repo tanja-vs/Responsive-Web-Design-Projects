@@ -54,6 +54,11 @@ body {
 	align-items: center;
 }
 
+#video {
+	width: 50vw;
+	height: 32vw;
+}
+
 #products {
 	display: flex;
 	flex-wrap: wrap;
