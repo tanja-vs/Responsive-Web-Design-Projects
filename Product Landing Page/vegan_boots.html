@@ -12,6 +12,8 @@
   	<meta name="keywords" content="vegan, cruelty-free, boots, shoes, brand">
   	<meta name="author" content="Tanja Veljanovska-Saveska"> 
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </head>
 
 <body>
@@ -19,10 +21,12 @@
 		<header id="header">
 			<h2 id="logo"><img id="header-img" src="https://image.flaticon.com/icons/png/512/37/37872.png">VEGAN BOOTS</h2>
 			<nav id="nav-bar">
-				<button class="nav-link" onclick="location.href='#description'">ABOUT</button>
-				<button class="nav-link" onclick="location.href='#products'">PRODUCTS</button>
-				<button class="nav-link" onclick="location.href='#brands'">BRANDS</button>
-				<button class="nav-link" onclick="location.href='#contact'">CONTACT</button>
+				<ul id="ulNav">
+					<li class="liNav"><a class="nav-link" href="#description">ABOUT</a></li>
+					<li class="liNav"><a class="nav-link" href="#products">PRODUCTS</a></li>
+					<li class="liNav"><a class="nav-link" href="#brands">BRANDS</a></li>
+					<li class="liNav"><a class="nav-link" href="#contact">CONTACT</a></li>
+				</ul>
 
 				<select id="select" name="menu" onchange="location = this.value;">
 					<option class="opt" value="#"></option>
@@ -166,7 +170,7 @@
 				<h2>We'd love to chat</h2>
 				<h4>Send us a message</h4>
 				
-				<form id="form">
+				<form id="form" action="https://www.freecodecamp.com/email-submit">
 					<br>
 					Name:
 					<br> 
@@ -174,7 +178,7 @@
 					<br>
 					E-mail:
 					<br>
-					<input class="input" id="email" type="email" name="mail" placeholder="Enter your e-mail here" required>
+					<input class="input" id="email" type="email" name="email" placeholder="Enter your e-mail here" required>
 					<br>
 					Message: 
 					<br>
