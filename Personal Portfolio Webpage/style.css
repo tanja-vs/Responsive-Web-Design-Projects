@@ -1,11 +1,6 @@
-body, #container, #navbar, #navLogo, #navLinks, #main, #welcome-section, #projects, #about, #contact, #footer  {
+body, #container {
 	margin: 0vw;
 	padding: 0vw;
-	background-color: white;
-	color: black;
-	font-family: sans-serif;
-	font-size: 1.2vw;
-	text-align: center;
 }
 
 #container {
@@ -15,6 +10,11 @@ body, #container, #navbar, #navLogo, #navLinks, #main, #welcome-section, #projec
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
+	background-color: black;
+	color: white;
+	font-family: sans-serif;
+	font-size: 1.2vw;
+	text-align: center;
 }
 
 #navbar, #main, #footer {
@@ -23,13 +23,13 @@ body, #container, #navbar, #navLogo, #navLinks, #main, #welcome-section, #projec
 
 #navbar
 {
+	background-color: black;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
 	position: sticky;
 	top: 0;
-	opacity: 0.8;
 	z-index: 999;
 }
 
@@ -47,17 +47,17 @@ body, #container, #navbar, #navLogo, #navLinks, #main, #welcome-section, #projec
 }
 
 .link {
-	color: black;
+	color: white;
 	text-decoration: none;
 	font-weight: bold;
 }
 
 .link:hover {
-	color: green;
+	color: pink;
 }
 
 #welcome-section {
-	background-image: url("http://www.exploringmacedonia.com/content/images/Matka/large/Matka%20-%20Goran%20Anastasovski%20(5).jpg");
+	background-image: url("https://images.freeimages.com/images/large-previews/9e6/abstract-polygonal-low-poly-photos-texture-3-636190.jpg");
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -83,30 +83,32 @@ body, #container, #navbar, #navLogo, #navLinks, #main, #welcome-section, #projec
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+		opacity: 0.8;
+	color: white;
+	font-size: 3vw;
+	padding: 5vw;
 }
 
+/*
 .layer {
 	position: relative;
 	top: 0;
 	left: 0;
 	background-color: green;
-	opacity: 0.8;
-	color: white;
-	font-size: 3vw;
-	padding: 17vw;
-}
 
+}
+*/
 
 #aboutImg {
-	background-image: url("http://s1.1zoom.me/big0/453/Fitness_Roads_Run_502738.jpg");
+	background-image: url("https://images.freeimages.com/images/large-previews/9e6/abstract-polygonal-low-poly-photos-texture-3-636190.jpg");
 }
 
 #workImg {
-	background-image: url("https://www.aspiretechnologies.in/wp-content/uploads/2018/03/responsive.jpg");
+	background-image: url("https://images.freeimages.com/images/large-previews/9e6/abstract-polygonal-low-poly-photos-texture-3-636190.jpg");
 }
 
 #contactImg {
-	background-image: url("https://res.cloudinary.com/wajahatkarimcom/image/upload/v1518636807/contactme.png");
+	background-image: url("https://images.freeimages.com/images/large-previews/9e6/abstract-polygonal-low-poly-photos-texture-3-636190.jpg");
 }
 
 
