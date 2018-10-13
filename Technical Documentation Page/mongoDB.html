@@ -1,0 +1,143 @@
+<!DOCTYPE>
+
+<html>
+
+<head>
+  <title>MongoDB Manual</title>
+
+  <meta charset="utf-8">
+  <meta name="description" content="MongoDB Manual - Technical Documentation Page">
+  <meta name="author" content="Tanja Veljanovska-Saveska">
+  <meta name="keywords" content="MongoDB, mongo, manual, Technical, Documentation, Page">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+</head>
+  
+<body>
+<div id="container">
+  <nav id="navbar">
+    <header class="header">MongoDB Manual</header>
+    <a class="nav-link" href="#Introduction_to_MongoDB">Introduction to MongoDB</a>
+    <a class="nav-link" href="#Install_MongoDB">Install MongoDB</a>
+    <a class="nav-link" href="#The_mongo_Shell">The mongo Shell</a>
+    <a class="nav-link" href="#MongoDB_CRUD_Operations">MongoDB CRUD Operations</a>
+    <a class="nav-link" href="#Aggregation">Aggregation</a>
+  </nav>
+  
+  <main id="main-doc">
+    <section id="Introduction_to_MongoDB" class="main-section">
+      <header class="header">Introduction to MongoDB</header>
+      <p class="text">MongoDB is an open-source document database that provides high performance, high availability, and automatic scaling.</p>
+      <h2>Document Database</h2>
+      <p class="text">A record in MongoDB is a document, which is a data structure composed of field and value pairs. MongoDB documents are similar to JSON objects. The values of fields may include other documents, arrays, and arrays of documents.</p>
+      <p class="text">The advantages of using documents are:</p>
+          <ul>
+            <li>Documents (i.e. objects) correspond to native data types in many programming languages.</li>
+            <li>Embedded documents and arrays reduce need for expensive joins.</li>
+            <li>Dynamic schema supports fluent polymorphism.</li>
+          </ul>
+      <h2>Key Features</h2>
+        <h3>High Performance</h3>
+        <p class="text">MongoDB provides high performance data persistence. In particular,</p>
+        <ul>
+          <li>Support for embedded data models reduces I/O activity on database system.</li>
+          <li>Indexes support faster queries and can include keys from embedded documents and arrays.</li>
+        </ul>
+
+        <h3>Rich Query Language</h3>
+        <p class="text">MongoDB supports a rich query language to support read and write operations (CRUD) as well as:</p>
+        <ul>
+          <li>Data Aggregation</li>
+          <li>Text Search and Geospatial Queries.</li>
+        </ul>
+
+        <h3>High Availability</h3>
+        <p class="text">MongoDB’s replication facility, called replica set, provides:</p>
+        <ul>
+          <li>automatic failover and</li>
+          <li>data redundancy.</li>
+        </ul>
+        <p class="text">A replica set is a group of MongoDB servers that maintain the same data set, providing redundancy and increasing data availability.</p>
+
+        <h3>Horizontal Scalability</h3>
+        <p class="text">MongoDB provides horizontal scalability as part of its core functionality:</p>
+        <ul>
+          <li>Sharding distributes data across a cluster of machines.</li>
+          <li>Starting in 3.4, MongoDB supports creating zones of data based on the shard key. In a balanced cluster, MongoDB directs reads and writes covered by a zone only to those shards inside the zone. See the Zones manual page for more information.</li> 
+        </ul>
+
+        <h3>Support for Multiple Storage Engines</h3>
+        <p class="text">MongoDB supports multiple storage engines:</p>
+        <ul>
+          <li>WiredTiger Storage Engine (including support for Encryption at Rest)</li>
+          <li>In-Memory Storage Engine</li>
+          <li>MMAPv1 Storage Engine (Deprecated in MongoDB 4.0)</li>
+        </ul>
+        <p class="text">In addition, MongoDB provides pluggable storage engine API that allows third parties to develop storage engines for MongoDB.</p>
+    </section>
+    
+    <section id="Install_MongoDB" class="main-section">
+      <header class="header">Install MongoDB</header>
+      <p class="text">MongoDB is released as two editions: Community and Enterprise. Community is the open source release of MongoDB. Enterprise provides additional administration, authentication, and monitoring features. Installation steps vary depending on the edition; both procedures are outlined in this section.</p>
+      <p>For upgrade instructions, see Upgrade Procedures instead.</p>
+    </section>
+    
+    <section id="The_mongo_Shell" class="main-section">
+      <header class="header">The mongo Shell</header>
+       <p class="text">The mongo shell is an interactive JavaScript interface to MongoDB. You can use the mongo shell to query and update data as well as perform administrative operations.</p>
+      <p class="text">The mongo shell is a component of the MongoDB distributions. Once you have installed and have started MongoDB, connect the mongo shell to your running MongoDB instance.</p>
+    </section>
+    
+    <section id="MongoDB_CRUD_Operations" class="main-section">
+       <header  class="header">MongoDB CRUD Operations</header>
+       <p class="text">CRUD operations create, read, update, and delete documents.</p>
+       <h2>Create Operations</h2>
+       <p class="text">Create or insert operations add new documents to a collection. If the collection does not currently exist, insert operations will create the collection.</p>
+       <p class="text">MongoDB provides the following methods to insert documents into a collection:</p>
+       <ul>
+        <li><code>db.collection.insertOne()</code> New in version 3.2</li>
+        <li><code>db.collection.insertMany()</code> New in version 3.2</li>
+      </ul>
+      <p class="text">In MongoDB, insert operations target a single collection. All write operations in MongoDB are atomic on the level of a single document.</p>
+       <h2>Read Operations</h2>
+       <p class="text">Read operations retrieves documents from a collection; i.e. queries a collection for documents. MongoDB provides the following methods to read documents from a collection:</p>
+      <ul>
+        <li><code>db.collection.find()</code></li>
+      </ul>
+      <p>You can specify query filters or criteria that identify the documents to return.</p>
+       <h2>Update Operations</h2>
+       <p class="text">Update operations modify existing documents in a collection. MongoDB provides the following methods to update documents of a collection:</p>
+       <ul>
+        <li><code>db.collection.updateOne()</code> New in version 3.2</li>
+        <li><code>db.collection.updateMany()</code> New in version 3.2</li>
+        <li><code>db.collection.replaceOne()</code> New in version 3.2</li>
+       </ul>
+       <p>In MongoDB, update operations target a single collection. All write operations in MongoDB are atomic on the level of a single document.</p>
+       <p>You can specify criteria, or filters, that identify the documents to update. These filters use the same syntax as read operations.</p>
+       <h2>Delete Operations</h2>
+       <p class="text">Delete operations remove documents from a collection. MongoDB provides the following methods to delete documents of a collection:</p>
+       <ul>
+        <li><code>db.collection.deleteOne()</code> New in version 3.2</li>
+        <li><code>db.collection.deleteMany()</code> New in version 3.2</li>
+      </ul>
+      <p>In MongoDB, delete operations target a single collection. All write operations in MongoDB are atomic on the level of a single document.</p>
+      <p>You can specify criteria, or filters, that identify the documents to remove. These filters use the same syntax as read operations.</p>
+       <h2>Bulk Write</h2>
+       <p class="text">MongoDB provides the ability to perform write operations in bulk. For details, see Bulk Write Operations.</p>
+    </section>
+    
+    <section id="Aggregation" class="main-section">
+      <header class="header">Aggregation</header>
+       <p class="text">Aggregation operations process data records and return computed results. Aggregation operations group values from multiple documents together, and can perform a variety of operations on the grouped data to return a single result. MongoDB provides three ways to perform aggregation: the aggregation pipeline, the map-reduce function, and single purpose aggregation methods.</p>
+    </section>
+  </main>
+  
+  </div>
+  
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  
+</body>
+ 
+</html>
