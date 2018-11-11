@@ -22,11 +22,12 @@
 <div id="layer">
 <div id="main">
   <h1 id="title">HOW HEALTHY IS YOUR DIET?</h1>
-  <p id="description">This survey-form is designed to assess the nutritional value of your
+  <p id="description">This questionnaire is designed to assess the nutritional value of your
 diet.</p>
     <br>
 
-  <form id="survey-form" action="/action_page.php">
+  <form id="survey-form">
+    <!--
     <label id="name-label"><strong>Name:</strong> 
     <input id="name" class="design" type="text"  required name="firstname" placeholder="Enter your first name">
     </label>
@@ -101,6 +102,7 @@ diet.</p>
     </label>
     <br>
     <br>
+    -->
 
     <label id="questions-label">
     <strong>Do you skip breakfast more than once a week?</strong>
@@ -313,7 +315,7 @@ diet.</p>
     <br>
     <br>
 
-    <input id="submit" type="submit" value="Submit">
+    <button id="submit" type="button" onclick="showResult()">Submit</button>
 </form> 
 
 </div>
