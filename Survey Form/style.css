@@ -24,8 +24,7 @@ body {
     z-index: 2;
 }
 
-#main {
-	background-color: #4dff97;
+.main {
 	width: 50%;
 	height: auto;
 	margin-right: auto;
@@ -39,7 +38,13 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
+#divForm {
+	background-color: #4dff97;
+}
 
+#divResult {
+	background-color: #ff5f4d;
+}
 
 #title {
 	font-family: 'Fahkwang', sans-serif;
@@ -82,9 +87,13 @@ body {
 	color: #454343;
 }
 
+#message {
+	color: #faf5f1;
+}
+
 @media screen and (max-width: 600px)
 {
-	#main {
+	.main {
 		width: 80%;
 		font-size: 3vw;
 	}
