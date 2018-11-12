@@ -9,6 +9,7 @@ function showResult() {
     var resultSeven = [];
     var checkYes = 0;
     var checkNo = 0;
+    var optimalDiet = 0;
     var adviceOne = document.getElementById("adviceOne");
     var adviceTwo = document.getElementById("adviceTwo");
     var adviceThree = document.getElementById("adviceThree");
@@ -314,6 +315,9 @@ function showResult() {
     }
 
     else if (answer.length === 29) {
+        document.getElementById("divForm").style.display = "none";
+        document.getElementById("divResult").style.display = "block";
+        
         checkYes = 0;
         checkNo = 0;
 
@@ -327,10 +331,12 @@ function showResult() {
         }
             
             if (checkYes >= checkNo) {
-                adviceOne.innerHTML = "you may want to consider making some changes to your diet:
-                •	It's not necessarily bad for you to skip meals and replace them with snacks, as long as the snacks you eat provide sufficient nutrients to replace those of a complete meal. Many people, particularly those who do lots of physical activity, snack throughout the day to maintain their energy levels.
-                •	Skipping meals on a regular basis, particularly breakfast, disturbs the body's metabolism and can affect the way that you feel in a variety of different ways. It can also make it more difficult for you if you are trying to lose weight. Try to establish a regular eating pattern with no longer than 3 or 4 hours between meals and snacks.
-                ";
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceOne.innerHTML = "It's not necessarily bad for you to skip meals and replace them with snacks, as long as the snacks you eat provide sufficient nutrients to replace those of a complete meal. Many people, particularly those who do lots of physical activity, snack throughout the day to maintain their energy levels."
+                + " Skipping meals on a regular basis, particularly breakfast, disturbs the body's metabolism and can affect the way that you feel in a variety of different ways. It can also make it more difficult for you if you are trying to lose weight. Try to establish a regular eating pattern with no longer than 3 or 4 hours between meals and snacks.";
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -345,18 +351,22 @@ function showResult() {
             }
         }
             
-            if (checkYes >= checkNo) {
-                adviceTwo.innerHTML = "Aim to eat at least 5 portions of fruit and vegetables every day.
-                •	Fresh, frozen, canned and dried fruit or vegetables and fruit or vegetable juices, all count.
-                •	A portion is about 80g.
-                •	Enjoy fruit and vegetables with meals and/or as snacks.
-                •	Watch out for sugar or syrup in some canned fruits and vegetables, and for salt in some canned vegetables,
-                •	Fruit juice counts as only 1 portion a day, however much you drink.
-                •	Beans and pulses count as only 1 portion a day, however much you eat
-                •	Try to include lots of different varieties of fruit and vegetables.
-                •	Try to avoid adding fat or rich sauces to vegetables.
-                Eating at least 5 portions of fruit and vegetables a day will contribute towards reducing the risk of coronary heart disease. They provide a variety of different vitamins and minerals, as well as being a good source of fibre.
-                ";
+            if (checkNo >= checkYes) {
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceTwo.innerHTML = "Aim to eat at least 5 portions of fruit and vegetables every day."
+                + " They provide a variety of different vitamins and minerals, as well as being a good source of fibre.";
+                document.getElementById("ulTwo").style.display = "block";
+                document.getElementById("listTwoOne").innerHTML = "Fresh, frozen, canned and dried fruit or vegetables and fruit or vegetable juices, all count.";
+                document.getElementById("listTwoTwo").innerHTML = "A portion is about 80g.";
+                document.getElementById("listTwoThree").innerHTML = "Enjoy fruit and vegetables with meals and/or as snacks.";
+                document.getElementById("listTwoFour").innerHTML = "Watch out for sugar or syrup in some canned fruits and vegetables, and for salt in some canned vegetables.";
+                document.getElementById("listTwoFive").innerHTML = "Fruit juice counts as only 1 portion a day, however much you drink.";
+                document.getElementById("listTwoSix").innerHTML = "Beans and pulses count as only 1 portion a day, however much you eat.";
+                document.getElementById("listTwoSeven").innerHTML = "Try to include lots of different varieties of fruit and vegetables.";
+                document.getElementById("listTwoEight").innerHTML = "Try to avoid adding fat or rich sauces to vegetables.";
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -371,15 +381,19 @@ function showResult() {
             }
         }
             
-            if (checkYes >= checkNo) {
-                adviceThree.innerHTML = "you may want to consider making some changes to your diet: Most people would benefit from eating less saturated fat. This is the type of fat found in many common foods including meat and dairy products and in many processed foods. Eating too much fat in general may contribute to weight gain, and too much saturated fat can contribute towards coronary heart disease.
-                Foods containing fat should be eaten in moderate amounts:
-                •	Choose lower-fat and/or leaner versions whenever you can. 'Lower-fat versions' means things like meat with the fat cut off, poultry without the skin, and fish without batter.
-                •	Avoid frying foods and instead opt for grilled, baked, boiled, steamed, dry-fried or microwaved choices.
-                •	Replacing some saturated fats with monounsaturated fats and polyunsaturated fats will help to improve the ratio of 'protective' cholesterol to 'harmful' cholesterol in your blood.
-                •	Eating oily fish regularly can help reduce the risk of coronary heart disease.
-                •	Beans and pulses are good alternatives to meat as they are naturally very low in fat
-                ";
+            if (checkNo >= checkYes) {
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceThree.innerHTML = "Most people would benefit from eating less saturated fat. This is the type of fat found in many common foods including meat and dairy products and in many processed foods. Eating too much fat in general may contribute to weight gain, and too much saturated fat can contribute towards coronary heart disease."
+                + " Foods containing fat should be eaten in moderate amounts:";
+                document.getElementById("ulThree").style.display = "block";
+                document.getElementById("listThreeOne").innerHTML = "Choose lower-fat and/or leaner versions whenever you can. 'Lower-fat versions' means things like meat with the fat cut off, poultry without the skin, and fish without batter.";
+                document.getElementById("listThreeTwo").innerHTML = "Avoid frying foods and instead opt for grilled, baked, boiled, steamed, dry-fried or microwaved choices.";
+                document.getElementById("listThreeThree").innerHTML = "Replacing some saturated fats with monounsaturated fats and polyunsaturated fats will help to improve the ratio of 'protective' cholesterol to 'harmful' cholesterol in your blood.";
+                document.getElementById("listThreeFour").innerHTML = "Eating oily fish regularly can help reduce the risk of coronary heart disease.";
+                document.getElementById("listThreeFive").innerHTML = "Beans and pulses are good alternatives to meat as they are naturally very low in fat.";               
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -394,12 +408,16 @@ function showResult() {
             }
         }
             
-            if (checkYes >= checkNo) {
-                adviceFour.innerHTML = ", you may want to consider making some changes to your diet: Aim to base all meals on a good-sized serving from this group, choosing wholegrain types when you can.
-                •	Starchy foods contain carbohydrate mainly in the form of starch, which provides energy. They also contain some protein, minerals, vitamins and fibre.
-                •	Fibre helps the digestive system function properly, preventing bowel disorders such as constipation.
-                •	Try to avoid frying foods in this food group (eg, chips), or adding too much fat (eg, spreading butter on bread), or adding rich sauces or dressings (eg, cheese sauce on pasta).
-                ";
+            if (checkNo >= checkYes) {
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceFour.innerHTML = "Aim to base all meals on a good-sized serving from starchy food, choosing wholegrain types when you can.";
+                document.getElementById("ulFour").style.display = "block";
+                document.getElementById("listFourOne").innerHTML = "Starchy foods contain carbohydrate mainly in the form of starch, which provides energy. They also contain some protein, minerals, vitamins and fibre.";
+                document.getElementById("listFourTwo").innerHTML = "Fibre helps the digestive system function properly, preventing bowel disorders such as constipation.";
+                document.getElementById("listFourThree").innerHTML = "Try to avoid frying foods in this food group (eg, chips), or adding too much fat (eg, spreading butter on bread), or adding rich sauces or dressings (eg, cheese sauce on pasta).";
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -415,10 +433,12 @@ function showResult() {
         }
             
             if (checkYes >= checkNo) {
-                adviceFive.innerHTML = "you may want to consider making some changes to your diet:
-                •	Foods high in added sugar include soft drinks, sweets, jams, cake, puddings, biscuits, pastries and ice-cream. If you eat foods and drinks containing sugar, eat them mainly at mealtimes rather than in between meals, to reduce the risk of tooth decay.
-                •	Sugar can count for a lot of additional calories during the day, especially if you add sugar to every drink
-                ";
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceFive.innerHTML = "Foods high in added sugar include soft drinks, sweets, jams, cake, puddings, biscuits, pastries and ice-cream. If you eat foods and drinks containing sugar, eat them mainly at mealtimes rather than in between meals, to reduce the risk of tooth decay."
+                + " Sugar can count for a lot of additional calories during the day, especially if you add sugar to every drink.";
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -434,9 +454,11 @@ function showResult() {
         }
             
             if (checkYes >= checkNo) {
-                adviceSix.innerHTML = "you may want to consider making some changes to your diet:
-                Reducing the amount of salt in your diet can help keep your blood pressure down, especially if this is part of a healthy diet that includes plenty of fruit and vegetables. Reducing your blood pressure reduces the risk of developing heart disease and stroke, even if your blood pressure is already within the normal range.
-                ";
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceSix.innerHTML = "Reducing the amount of salt in your diet can help keep your blood pressure down, especially if this is part of a healthy diet that includes plenty of fruit and vegetables. Reducing your blood pressure reduces the risk of developing heart disease and stroke, even if your blood pressure is already within the normal range.";
+            }
+            else {
+                optimalDiet++;
             }
 
         checkYes = 0;
@@ -451,11 +473,17 @@ function showResult() {
             }
         }
             
-            if (checkYes >= checkNo) {
-                adviceSeven.innerHTML = ", you may want to consider making some changes to your diet:
-                •	In climates such as in the UK, we should drink about 1.2 litres (6 to 8 glasses) of fluid every day to stop us getting dehydrated.
-                •	Too much alcohol can damage the heart muscle, increase blood pressure and lead to weight gain. However, moderate drinking — between 1 and 2 units a day — may help protect the heart in men aged over 40 and women who have gone through the menopause.
-                ";
+            if (checkNo >= checkYes) {
+                document.getElementById("headlineAdvice").style.display = "block";
+                adviceSeven.innerHTML = "You should drink about 1.2 litres (6 to 8 glasses) of fluid every day to stop you getting dehydrated."
+                + " Too much alcohol can damage the heart muscle, increase blood pressure and lead to weight gain. However, moderate drinking — between 1 and 2 units a day — may help protect the heart in men aged over 40 and women who have gone through the menopause.";
+            }
+            else {
+                optimalDiet++;
+            }
+
+            if (optimalDiet === 7) {
+                document.getElementById("headlineOptimalDiet").style.display = "block";
             }
     }
     
