@@ -1,0 +1,311 @@
+body {
+	margin: 0vw;
+	padding: 0vw;
+}
+
+.divDesign {
+	background-color: white;
+	color: black;
+	font-size: 1.7vw;
+	font-family: sans-serif;
+	text-align: center;
+	margin: 0vw;
+	padding: 1vw;
+}
+
+#container {
+	display: grid;
+	grid-gap: 0vw 0vw;
+	grid-template-rows: auto auto auto auto auto;
+	padding: 0vw;
+}
+
+#headerDiv, #navigationDiv, #socialDiv, #footerDiv, #sel, .opt {
+	background-color: red;
+	color: white;
+}
+
+#navigationDiv {
+	text-align: center;
+	padding-right: 3vw;
+	position: sticky;
+	top: 0vw;
+}
+
+#headerDiv, #footerDiv {
+	padding: 6vw;
+}
+
+#headerDiv, #socialDiv {
+	font-size: 3vw;
+}
+
+#footerDiv {
+	padding-top: 8vw;
+	font-size: 1.3vw;
+}
+
+.listNav {
+	display: inline;
+	padding: 1vw;
+}
+
+.linkNav {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.linkNav:hover {
+	opacity: 0.5;
+}
+
+#download {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#download:hover {
+	opacity: 0.5;
+}
+
+.fa {
+	color: white;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.fa:hover {
+	opacity: 0.5;
+}
+
+#sel {
+	display: none;
+}
+
+#mainDiv {
+	display: grid;
+	grid-gap: 0vw;
+	grid-template-columns: 49.3vw 49.3vw;
+	justify-content: center;
+	align-content: center;
+	padding: 0vw;
+}
+
+.imageDiv {
+	background-color: black;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 30vw;
+	border: none;
+}
+
+.textDiv {
+	height: 60vh;
+	padding-left: 3vw;
+	padding-right: 3vw;
+	border: none;
+}
+
+h3 {
+	color: red;
+}
+
+.center { 
+	grid-column: 1 / 3;
+	height: auto;
+	background-color: #ff736e;
+}
+
+.left {
+	grid-column: 1 / 2;
+	text-align: right;
+}
+
+.right {
+	grid-column: 2 / 3;
+	text-align: left;
+}
+
+span {
+	font-weight: bold;
+	color: red;
+}
+
+#coverImg {
+	order: 0;
+	background-image: url("../Images/european_mink.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	height: 50vw;
+}
+
+#introduction {
+	order: 1;
+}
+
+#img1 {
+	order: 2;
+	background-image: url("../Images/saiga_tatarica.jpg");
+}
+
+#text1 {
+	order: 3;
+}
+
+#img2 {
+	order: 5;
+	background-image: url("../Images/lynx_pardinus.jpg");
+}
+
+#text2 {
+	order: 4;
+}
+
+#img3 {
+	order: 6;
+	background-image: url("../Images/monachus_monachus.jpg");
+}
+
+#text3 {
+	order: 7;
+}
+
+#img4 {
+	order: 9;
+	background-image: url("../Images/eubalaena_glacialis.jpg");
+}
+
+#text4 {
+	order: 8;
+}
+
+#img5 {
+	order: 10;
+	background-image: url("../Images/microtus_bavaricus.jpg");
+}
+
+#text5 {
+	order: 11;
+}
+
+#report {
+	order: 12;
+}
+
+.fa {
+   	padding: 1.5vw;
+   	width: 3vw;
+   	text-align: center;
+   	text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+	#headerDiv, #socialDiv {
+		font-size: 4.5vw;
+	}
+
+	#socialDiv {
+		padding: 2vw;
+	}
+
+	#navigationDiv {
+		text-align: right;
+		margin-right: 2.5vw;
+	}
+
+	.listNav {
+		display: none;
+	}
+
+	#sel, .opt {
+		display: inline;
+		border: none;
+		font-weight: bold;
+		padding: 2vw;
+	}
+
+	#footerDiv {
+		font-size: 2.5vw;
+	}
+
+	.textDiv {
+		height: auto;
+		font-size: 3.5vw;
+		padding: 4vw;
+	}
+
+	.imageDiv {
+		height: 50vw;
+	}
+
+	.left {
+		grid-column: 1 / 3;
+		text-align: center;
+	}
+
+	.right {
+		grid-column: 1 / 3;
+		text-align: center;
+	}
+
+	#coverImg {
+	order: 0;
+	height: 60vw;
+}
+
+	#introduction {
+		order: 1;
+	}
+
+	#img1 {
+		order: 2;
+	}
+
+	#text1 {
+		order: 3;
+	}
+
+	#img2 {
+		order: 4;
+	}
+
+	#text2 {
+		order: 5;
+	}
+
+	#img3 {
+		order: 6;
+		background-image: url("../Images/monachus_monachus.jpg");
+	}
+
+	#text3 {
+		order: 7;
+	}
+
+	#img4 {
+		order: 8;
+		background-image: url("../Images/eubalaena_glacialis.jpg");
+	}
+
+	#text4 {
+		order: 9;
+	}
+
+	#img5 {
+		order: 10;
+		background-image: url("../Images/microtus_bavaricus.jpg");
+	}
+
+	#text5 {
+		order: 11;
+	}
+
+	#report {
+		order: 12;
+	}
+}
+
