@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>MY JOURNEY TO BECOMING A WEB DEVELOPER</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="My blog">
+	<meta name="author" content="Tanja Veljanovska-Saveska">
+	<meta name="keywords" content="Personal portfolio, about, work, projects, contact">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Itim|Source+Sans+Pro" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="blogStyle.css">
+</head>
+
+<body>
+	<header id="blogName">
+		<h1>My journey to becoming a web developer</h1>
+	</header>
+
+	<nav id="mainNav">
+		<ul class="uls">
+			<li class="mainLi"><a class="aMain" href="#about">ABOUT</a></li>
+			<li class="mainLi"><a class="aMain" href="#footerSocial">CONTACT</a></li>
+			<li class="mainLi"><a class="aMain" href="https://codepen.io/tanjamarathon/full/ePExRE" target="_blank">PORTFOLIO</a></li>
+		</ul>
+	</nav>
+
+	<section id="mainSec">
+		<article class="articles" id="jsStringMethods">
+			<h1>JAVASCRIPT STRING PROPERTIES & METHODS</h1>
+			<br>
+			<br>
+			<img id="imgJSMethods" src="https://cdn-images-1.medium.com/max/1600/1*tifNDBJM5QhgjZSTQYJR-Q.png">
+			<p>With <strong><em>JavaScript</em></strong>, <strong>methods</strong> and <strong>properties</strong> are also available to <em>primitive values</em> (a single simple data value with no additional properties and methods), because <strong><em>JavaScript</em></strong> treats primitive values as objects when executing methods and properties.</p>
+			<br>
+			<button class="btnResults btnRead" id="btn2" type="button" onclick="readMore('btn2','jsPM')">Read More</button>
+			<br>
+
+			<div id="jsPM">
+			<h3>JavaScript String Properties</h3>
+			<ul>
+				<li class="listsStrong">length</li>
+					<code>let str = "Hello developers!";
+					<br>let num = str.length;</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex1()">Try it!</button>
+					<p id="answer1" class="answers"></p>
+					<p>The <strong>length</strong> property returns the <em>length of a string.</em></p>
+				<li class="listsStrong">property access [ ]</li>
+					<code>let str = "Hello developers!";
+					<br>let ch = str[6];
+					<br>str[6] = "D";</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex2()">Try it!</button>
+					<p id="answer2" class="answers"></p>
+					<p><strong>Property access [ ]</strong> is one way for <em>extracting string characters.</em> It is read only. str[6] = "D" gives no error (but does not work!). <strong>Remember:</strong> In <strong><em>JavaScript</em></strong> the <em>first positon</em> in a string is 0.</p>
+			</ul>
+			<br>
+
+			<h3>JavaScript String Methods</h3>
+			<ul>
+				<li class="listsStrong">charAt()</li>
+					<code>let str = "Hello developers!";
+					<br>let ch = str.charAt(6);
+					<br><span id="comment">//str.charAt(6) = "D"; This line is commented because it gives an error</span></code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex2a()">Try it!</button>
+					<p id="answer2a" class="answers"></p>
+					<p>The <strong>charAt()</strong> method returns the <em>character at a specified index (position)</em> in a string.</p>
+				<li class="listsStrong">indexOf()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.indexOf("developers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex3()">Try it!</button>
+					<p id="answer3" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.indexOf("developers", 20);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex4()">Try it!</button>
+					<p id="answer4" class="answers"></p>
+					<p>The <strong>indexOf()</strong> method returns the <em>index of (the position of) the first occurrence of a specified text</em> in a string. If the text is not found, it returns -1.</p> 
+					<p>This methods accept a <strong>second parameter</strong> as the starting position for the search.</p>
+				<li class="listsStrong">lastIndexOf()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.lastIndexOf("developers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex5()">Try it!</button>
+					<p id="answer5" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.lastIndexOf("programers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex6()">Try it!</button>
+					<p id="answer6" class="answers"></p>
+					<p>The <strong>lastIndexOf()</strong> method returns the <em>index of (the position of) the last occurrence of a specified text</em> in a string. If the text is not found, it returns -1.</p> 
+					<p>This methods accept a <strong>second parameter</strong> as the starting position for the search.</p>
+				<li class="listsStrong">search()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.search("developers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex7()">Try it!</button>
+					<p id="answer7" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let index = str.search("programers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex7a()">Try it!</button>
+					<p id="answer7a" class="answers"></p>
+					<p>The <strong>search()</strong> method searches a string for a specified value and returns the <em>position of the match</em>. If the text is not found, it returns -1.</p>
+					<p>The <strong>differences</strong> between <strong>search()</strong> and <strong>indexOf()</strong> method: the <strong>search()</strong> method <em>cannot</em> take a second start position argument and the <strong>indexOf()</strong> method <em>cannot</em> take powerful search values (<strong>regular expressions</strong>).</p>
+				<li class="listsStrong">slice()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.slice(6, 28);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex8()">Try it!</button>
+					<p id="answer8" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.slice(-18, -7);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex9()">Try it!</button>
+					<p id="answer9" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.slice(6);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex10()">Try it!</button>
+					<p id="answer10" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.slice(-18);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex11()">Try it!</button>
+					<p id="answer11" class="answers"></p>
+					<p>The <strong>slice()</strong> method <em>extracts a part of a string</em> and returns the <em>extracted part in a new string</em>. The method takes 2 parameters: the starting index (position), and the ending index (position).</p>
+					<p>If a <strong>parameter</strong> is <em>negative</em>, the position is counted from the end of the string.</p>
+					<p>If you <em>omit</em> the <strong>second parameter</strong>, the method will slice out the rest of the string.</p>
+				<li class="listsStrong">substring()</li>
+					<p>The <strong>substring()</strong> method is similar to <strong>slice()</strong>. The difference is that <strong>substring()</strong> cannot accept negative indexes.</p>
+				<li class="listsStrong">substr()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.substr(6, 28);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex12()">Try it!</button>
+					<p id="answer12" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.substr(-18, 7);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex13()">Try it!</button>
+					<p id="answer13" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.substr(6);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex14()">Try it!</button>
+					<p id="answer14" class="answers"></p>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.substr(-18);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex15()">Try it!</button>
+					<p id="answer15" class="answers"></p>
+					<p>The <strong>substr()</strong> method is similar to <strong>slice().</strong> The difference is that the second parameter specifies the length of the extracted part.</p>
+					<p>If you <em>omit</em> the <strong>second parameter</strong>, <strong>substr()</strong> will slice out the rest of the string.</p>
+				<li class="listsStrong">replace()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.replace("developers", "programers");</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex16()">Try it!</button>
+					<p id="answer16" class="answers"></p>
+					<p>The <strong>replace()</strong> method <em>replaces a specified value with another value</em> in a string.</p>
+					<p>By default, the <strong>replace()</strong> method replaces <em>only</em> the first match.</p>
+					<p>By default, the <strong>replace()</strong> method is case sensitive. To replace case insensitive, use a <strong>regular expression.</strong></p>
+				<li class="listsStrong">toUpperCase()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.toUpperCase();</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex17()">Try it!</button>
+					<p id="answer17" class="answers"></p>
+					<p>A string is <em>converted to upper case</em> with <strong>toUpperCase()</strong> method.</p>
+				<li class="listsStrong">toLowerCase()</li>
+					<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+					<br>let newStr = str.toLowerCase();</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex18()">Try it!</button>
+					<p id="answer18" class="answers"></p>
+					<p>A string is <em>converted to lower case</em> with <strong>toLowerCase()</strong> method.</p>	
+				<li class="listsStrong">concat()</li>
+					<code>let str1 = "Hello developers from Skopje";
+					<br>let str2 = "and developers form the rest of the world!";
+					<br>let newStr = str1.concat(" ", str2);</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex19()">Try it!</button>
+					<p id="answer19" class="answers"></p>
+					<p>The <strong>concat()</strong> method <em>joins two or more strings</em> and can be uesd instead of <strong>"+" operator</strong>.</p>	
+				<li class="listsStrong">trim()</li>
+					<code><pre>let str = "        ... Hello     ...       developers     ...       !...       ";</pre>
+					let newStr = str.trim();</code>
+					<br>
+					<br>
+					<button class="btnResults" type="button" onclick="ex20()">Try it!</button>
+					<pre id="answer20" class="answers"></pre>
+					<p>The <strong>trim()</strong> method <em>removes whitespace from both sides</em> of a string.</p>		
+			</ul>
+			<br>
+
+			<h3>JavaScript String split() Method</h3>
+			<p>A <strong>string</strong> can be <em>converted</em> to an <strong>array</strong> with the <strong>split()</strong> method</p>
+				<ul>
+					<li class="listsStrong">split()</li>
+						<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+						<br>let newArray = str.split();</code>
+						<br>
+						<br>
+						<button class="btnResults" type="button" onclick="ex21()">Try it!</button>
+						<p id="answer21" class="answers"></p>
+					<li class="listsStrong">split("")</li>
+						<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+						<br>let newArray = str.split("");</code>
+						<br>
+						<br>
+						<button class="btnResults" type="button" onclick="ex22()">Try it!</button>
+						<p id="answer22" class="answers"></p>
+					<li class="listsStrong">split(" ")</li>
+						<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+						<br>let newArray = str.split(" ");</code>
+						<br>
+						<br>
+						<button class="btnResults" type="button" onclick="ex23()">Try it!</button>
+						<p id="answer23" class="answers"></p>
+					<li class="listsStrong">split("e")</li>
+						<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+						<br>let newArray = str.split("e");</code>
+						<br>
+						<br>
+						<button class="btnResults" type="button" onclick="ex24()">Try it!</button>
+						<p id="answer24" class="answers"></p>
+					<li class="listsStrong">split("elopers")</li>
+						<code>let str = "Hello developers from Skopje and developers form the rest of the world!";
+						<br>let newArray = str.split("elopers");</code>
+						<br>
+						<br>
+						<button class="btnResults" type="button" onclick="ex25()">Try it!</button>
+						<p id="answer25" class="answers"></p>
+				</ul>
+				<br>
+
+				<h3>Practise JavaScript String Properties and Methods</h3>
+				<p><a class="textLinks" href="https://www.w3resource.com/javascript-exercises/javascript-string-exercises.php" target="_blank">Here</a>, you can find many exercises to practise <strong><em>JavaScript</em></strong> string properties and methods.</p>
+			</div>
+		</article>
+
+		<article class="articles" id="webDeveloper">
+			<h1>WEB DEVELOPER, WEB DEVELOPMENT AND MORE...</h1>
+			<br>
+
+			<h3>What is web developer?</h3>
+			<iframe src="https://www.youtube.com/embed/ujGlt8x4Z4I"></iframe>
+			<p>A <a class="textLinks" href="https://en.wikipedia.org/wiki/Web_developer" target="_blank">web developer</a> is a programmer who specializes in, or is specifically engaged in, the development of <strong>World Wide Web applications</strong>, or applications that are run over HTTP from a web server to a web browser.</p>
+			<p><strong>Web developers</strong> typically handle both server-side and front-end logic. This usually involves implementing all the visual elements that users see and use in the <strong>web application</strong>, as well as all the web services and APIs that are necessary to power the front-end.</p>
+			<br>
+			<button class="btnResults btnRead" id="btn1" type="button" onclick="readMore('btn1','webDev')">Read More</button>
+			<div id="webDev">
+			<h3>WHAT SHOULD EVERY WEB DEVELOPER KNOW?</h3>
+			<br>
+
+			<h3>What is Internet?</h3>
+			<iframe src="https://www.youtube.com/embed/AEaKrq3SpW8"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Internet" target="_blank">Internet</a> is the global system of interconnected computer networks that use the <strong>Internet protocol suite (TCP/IP)</strong> to link devices worldwide.</p>
+			<p>It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of <em>electronic, wireless,</em> and <em>optical networking technologies.</em> The <strong>Internet</strong> carries a vast range of information resources and services, such as the inter-linked hypertext documents and applications of the World Wide Web (WWW), electronic mail, telephony, and file sharing.</p>
+			<iframe src="https://www.youtube.com/embed/e4S8zfLdLgQ"></iframe>
+			<iframe src="https://www.youtube.com/embed/FTAPjr7vgxE"></iframe>
+			<p class="paraMore"><strong>Read more:</strong></p>
+			<ul class="ulMore">
+				<li><a class="textLinks" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work" target="_blank">How does the Internet work?</a></li>
+			</ul>
+			<p class="paraMore"><strong>Watch more:</strong></p>
+			<ul class="ulMore">
+				<li><a class="textLinks" href="https://vimeo.com/128575085" target="_blank">How Does The Internet Work?</a></li>
+				<li><a class="textLinks" href="https://youtu.be/7_LPdttKXPc" target="_blank">How the Internet Works in 5 Minutes.</a></li>
+				<li><a class="textLinks" href="https://youtu.be/ewrBalT_eBM" target="_blank">There and Back Again: A Packet's Tale. How Does the Internet Work?</a></li>
+			</ul>
+			<br>
+			
+			<h3>What is Internet protocol suite?</h3>
+			<iframe src="https://www.youtube.com/embed/McFnYjCP6Qc"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Internet_protocol_suite" target="_blank">Internet protocol suite</a> is the conceptual model and set of communications protocols used on the Internet and similar computer networks. It is commonly known as <strong>TCP/IP</strong> because the foundational protocols in the suite are the <strong>Transmission Control Protocol (TCP)</strong> and the <strong>Internet Protocol (IP)</strong>.</p>
+			<p>The <strong>Internet protocol suite</strong> provides end-to-end data communication specifying how data should be <em>packetized, addressed, transmitted, routed,</em> and <em>received</em>. This functionality is organized into four abstraction layers, which classify all related protocols according to the scope of networking involved. From lowest to highest, the layers are the <strong>link layer</strong>, containing communication methods for data that remains within a single network segment (link); the <strong>internet layer</strong>, providing internetworking between independent networks; the <strong>transport layer</strong>, handling host-to-host communication; and the <strong>application layer</strong>, providing process-to-process data exchange for applications.</p>
+			<br>
+
+			<h3>What is TCP?</h3>
+			<iframe src="https://www.youtube.com/embed/hTIHRjcOLns"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Transmission_Control_Protocol" target="_blank">Transmission Control Protocol (TCP)</a> is one of the main protocols of the <strong>Internet protocol suite</strong>. It originated in the initial network implementation in which it complemented the Internet Protocol (IP). Therefore, the entire suite is commonly referred to as TCP/IP. 
+			<p><strong>TCP</strong> provides reliable, ordered, and error-checked delivery of a stream of octets (bytes) between applications running on hosts communicating via an IP network. Major internet applications such as the World Wide Web, email, remote administration, and file transfer rely on TCP.</p> 
+			<p>Applications that do not require reliable data stream service may use the <strong>User Datagram Protocol (UDP)</strong>, which provides a connectionless datagram service that emphasizes reduced latency over reliability.</p>
+			<br>
+
+			<h3>What is IP?</h3>
+			<iframe src="https://www.youtube.com/embed/fZgynBjxfss"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Internet_Protocol" target="_blank">Internet Protocol (IP)</a> is the principal communications protocol in the <strong>Internet protocol suite</strong> for relaying datagrams across network boundaries. Its routing function enables internetworking, and essentially establishes the Internet.</p>
+			<p><strong>IP</strong> has the task of <em>delivering packets</em> from the <strong>source host</strong> to the <strong>destination host</strong> solely based on the <strong>IP addresses</strong> in the packet headers. For this purpose, <strong>IP</strong> defines packet structures that encapsulate the data to be delivered. It also defines addressing methods that are used to label the datagram with source and destination information.</p>
+			<br>
+
+			<h3>What is World Wide Web?</h3>
+			<iframe src="https://www.youtube.com/embed/guvsH5OFizE"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/World_Wide_Web" target="_blank">World Wide Web (WWW)</a>, also called the <strong>Web</strong>, is an information space where documents and other web resources are identified by <em>Uniform Resource Locators (URLs)</em>, interlinked by hypertext links, and accessible via the <em>Internet.</em></p>
+			<p>English scientist <strong>Tim Berners-Lee</strong> invented the <strong>World Wide Web</strong> in 1989. He wrote <strong>the first web browser</strong> in 1990 while employed at CERN near Geneva, Switzerland. The browser was released outside CERN in 1991, first to other research institutions starting in January 1991 and to the general public on the Internet in August 1991.</p>
+			<p class="paraMore"><strong>Read more:</strong></p>
+			<ul class="ulMore">
+				<li><a class="textLinks" href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works#Clients_and_servers" target="_blank">How the Web works</a></li>
+				<li><a class="textLinks" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Pages_sites_servers_and_search_engines" target="_blank">What is the difference between webpage, website, web server, and search engine?</a></li>
+			</ul>
+			<br>
+
+			<h3>What is web server?</h3>
+			<iframe src="https://www.youtube.com/embed/nhZMH8oX6xI"></iframe>
+			<p><a class="textLinks" href="https://en.wikipedia.org/wiki/Web_server" target="_blank">Web server</a> refers to server software, or hardware dedicated to running said software, that can serve contents to the <strong>World Wide Web</strong>. A <strong>web server</strong> <em>processes</em> incoming network requests over <strong>HTTP</strong> and several other related protocols.</p>
+			<p>The primary function of a <strong>web server</strong> is to <em>store, process</em> and <em>deliver</em> web pages to clients. The communication between <strong>client</strong> and <strong>server</strong> takes place using the <strong>Hypertext Transfer Protocol (HTTP)</strong>. Pages delivered are most frequently HTML documents, which may include images, style sheets and scripts in addition to the text content.</p>
+			<br>
+			
+			<h3>What is web browser?</h3>
+			<iframe src="https://www.youtube.com/embed/fyOSkkQK14w"></iframe>
+			<p>A <a class="textLinks" href="https://en.wikipedia.org/wiki/Web_browser" target="_blank">web browser</a> is a software application for accessing information on the <strong>World Wide Web</strong>. Each individual web page, image, and video is identified by a distinct URL, enabling browsers to retrieve and display them on the user's device.</p>
+			<p>The most popular <strong>web browsers</strong> are <em>Chrome, Firefox, Safari, Internet Explorer</em>, and <em>Edge</em>.</p>
+			<br>
+
+			<h3>What is search engine?</h3>
+			<iframe src="https://www.youtube.com/embed/vrjAIBgxm_w"></iframe>
+			<p>A <a class="textLinks" href="https://en.wikipedia.org/wiki/Web_search_engine" target="_blank">web search engine</a> is a software system that is designed to search for information on the <strong>World Wide Web</strong>. The search results are generally presented in a line of results, often referred to as <strong>search engine results pages (SERPs)</strong>. The information may be a mix of web pages, images and other types of files. Some search engines also mine data available in databases or open directories. Unlike web directories, which are maintained only by human editors, search engines also maintain real-time information by running an algorithm on a <em>web crawler</em>. Internet content that is not capable of being searched by a web search engine is generally described as the <em>deep web</em>.</p>
+			<br>
+
+			<h3>What is HTTP?</h3>
+			<iframe src="https://www.youtube.com/embed/SzSXHv8RKdM"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol" target="_blank">Hypertext Transfer Protocol (HTTP)</a> is an application protocol for distributed, collaborative, hypermedia information systems. <strong>HTTP</strong> is the foundation of data communication for the <strong>World Wide Web</strong>, where hypertext documents include hyperlinks to other resources that the user can easily access, for example by a mouse click or by tapping the screen.</p>
+			<p class="paraMore"><strong>Read more:</strong></p>
+			<ul class="ulMore">
+				<li><a class="textLinks" href="https://launchschool.com/books/http" target="_blank">Introduction to HTTP</a></li>
+				<li><a class="textLinks" href="https://dev.opera.com/articles/http-basic-introduction/" target="_blank">HTTP — an Application-Level Protocol</a></li>
+				<li><a class="textLinks" href="https://dev.opera.com/articles/http-lets-get-it-on/" target="_blank">HTTP: Let’s GET It On!</a></li>
+				<li><a class="textLinks" href="https://dev.opera.com/articles/http-response-codes/" target="_blank">HTTP: Response Codes</a></li>
+				<li><a class="textLinks" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview" target="_blank">An overview of HTTP</a></li>
+			</ul>
+			<br>
+
+			<h3>What is URL?</h3>
+			<iframe src="https://www.youtube.com/embed/OvF_pnJ6zrY"></iframe>
+			<p>A <a class="textLinks" href="https://en.wikipedia.org/wiki/URL" target="_blank">Uniform Resource Locator (URL)</a>, colloquially termed a <strong>web address</strong>, is a reference to a web resource that specifies its location on a computer network and a mechanism for retrieving it. A <strong>URL</strong> is a specific type of <strong>Uniform Resource Identifier (URI)</strong>, although many people use the two terms interchangeably. <strong>URLs</strong> occur most commonly to reference <em>web pages <strong>(http)</strong>,</em> but are also used for <em>file transfer <strong>(ftp)</strong>, email <strong>(mailto)</strong>, database access <strong>(JDBC)</strong></em>, and many other applications.
+			<p>Most <strong>web browsers</strong> display the <strong>URL</strong> of a web page above the page in an address bar. A typical <strong>URL</strong> could have the form http://www.example.com/index.html, which indicates a <strong>protocol</strong> (http), a <strong>hostname</strong> (www.example.com), and a <strong>file name</strong> (index.html).</em></p>
+			<br>
+			
+			<h3>What is domain name?</h3>
+			<iframe src="https://www.youtube.com/embed/zXKKUJm9rZo"></iframe>
+			<p>A <a class="textLinks"href="https://en.wikipedia.org/wiki/Domain_name" target="_blank">domain name</a> is an identification string that defines a realm of administrative autonomy, authority or control within the Internet. <strong>Domain names</strong> are formed by the rules and procedures of the <strong>Domain Name System (DNS)</strong>. Any name registered in the <strong>DNS</strong> is a <strong>domain name</strong>. <strong>Domain names</strong> are used in various networking contexts and for application-specific naming and addressing purposes. In general, a domain name represents an Internet Protocol (IP) resource, such as a personal computer used to access the Internet, a server computer hosting a web site, or the web site itself or any other service communicated via the Internet.</p>
+			<p><strong>Domain names</strong> are organized in subordinate levels (subdomains) of the <strong>DNS</strong> root domain, which is nameless. The first-level set of domain names are the <strong>top-level domains (TLDs)</strong>, including the <strong>generic top-level domains (gTLDs)</strong>, such as the prominent domains <strong>com, info, net, edu,</strong> and <strong>org</strong>, and the <strong>country code top-level domains (ccTLDs)</strong>. Below these top-level domains in the <strong>DNS</strong> hierarchy are the <strong>second-level</strong> and <strong>third-level domain names</strong> that are typically open for reservation by end-users who wish to connect local area networks to the Internet, create other publicly accessible Internet resources or run web sites.</p>
+			<p>The registration of these <strong>domain names</strong> is usually administered by <em>domain name registrars</em> who sell their services to the public.</p>
+			<p class="paraMore"><strong>Read more:</strong></p>
+			<ul class="ulMore">
+				<li><a class="textLinks" href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_domain_name#How_does_a_DNS_request_work" target="_blank">What is a domain name?</a></li>
+			</ul>
+			<br>
+
+			<h3>What is DNS?</h3>
+			<iframe src="https://www.youtube.com/embed/72snZctFFtA"></iframe>
+			<p>The <a class="textLinks" href="https://en.wikipedia.org/wiki/Domain_Name_System" target="_blank">Domain Name System (DNS)</a> is a hierarchical decentralized naming system for computers, services, or other resources connected to the Internet or a private network. It associates various information with <strong>domain names</strong> assigned to each of the participating entities.</p> 
+			<p>Most prominently, it <em>translates</em> more readily memorized <strong>domain names</strong> to the <strong>numerical IP addresses</strong> needed for locating and identifying computer services and devices with the underlying network protocols.</p>
+			</div>
+		</article>
+	</section>
+		
+	<aside id="asideNav">
+		<h3>BLOG POSTS:</h3>
+		<ul>
+			<li><a class="textLinks" href="#jsStringMethods">JAVASCRIPT STRING PROPERTIES & METHODS</a></li>
+			<li><a class="textLinks" href="#webDeveloper">WEB DEVELOPER, WEB DEVELOPMENT AND MORE...</a></li>
+		</ul>
+	</aside>
+
+	<main id="about">
+		<p>This blog consists of notes, examples & video tutorials, which are helping me and may also help others in the journey to becoming a WEB DEVELOPER.</p>
+	</main>
+	
+	<footer id="footerSocial">
+		<p id="parSocial">Contact: </p>
+		<ul class="uls" id="ulSocial">
+			<li class="liSocial"><a class="fa fa-linkedin" href="https://www.linkedin.com/in/tanja-veljanovska-saveska-98806766/" target="_blank"></a></li>
+			<li class="liSocial"><a class="fa fa-twitter" href="https://twitter.com/tanjamarathon" target="_blank"></a></li>
+		</ul>
+	</footer>
+
+	<footer id="footerSignature">
+		<p>Designed & Developed by: Tanja Veljanovska-Saveska</p>
+	</footer>
+
+	<script type="text/javascript" src="blogScript.js"></script>
+</body>
+
+</html>
