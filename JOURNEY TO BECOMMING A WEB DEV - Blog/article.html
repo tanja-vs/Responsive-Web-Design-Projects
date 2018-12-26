@@ -1,0 +1,144 @@
+<article class="articles" id="introHTML">
+
+	<h1>WHAT IS HTML?</h1>
+	<br>
+	<br>
+	<ul>
+		<li>HTML is the standard markup language for creating Web pages.</li>
+		<li>HTML stands for Hyper Text Markup Language.</li>
+		<li>HTML describes the structure of Web pages using markup.</li>
+		<li>HTML elements are the building blocks of HTML pages.</li>
+		<li>HTML elements are represented by tags.</li>
+	</ul>
+	<br>
+
+	<h4>HTML Tags</h4>
+	<p>HTML tags are element names surrounded by angle brackets.</p>
+	<p>HTML tags normally come in pairs. The first tag in a pair is the start tag (opening tag), the second tag is the end tag (closing tag). The end tag is written like the start tag, but with a forward slash inserted before the tag name.</p>
+	<p>HTML tags are not case sensitive: &lt;P&gt; means the same as &lt;p&gt;</p>
+	<p>The HTML5 standard does not require lowercase tags, but W3C recommends lowercase in HTML, and demands lowercase for stricter document types like XHTML.</p>
+	<p>Browsers do not display the HTML tags, but use them to render the content of the page.</p>
+	<br>
+
+	<h4>HTML Elements</h4>
+	<p>An HTML element usually consists of a start tag and end tag, with the content inserted in between:</p>
+	<p>&lt;tagname&gt;Content goes here...&lt;tagname&gt;</p>
+	<p>The HTML element is everything from the start tag to the end tag.</p>
+
+	<h4>Nested HTML Elements</h4>
+	<p>HTML elements can be nested (elements can contain elements).</p>
+	<p>All HTML documents consist of nested HTML elements.</p>
+
+	<h4>HTML Attributes</h4>
+	<ul>
+		<li>All HTML elements can have attributes</li>
+		<li>Attributes provide additional information about an element</li>
+		<li>Attributes are always specified in the start tag</li>
+		<li>Attributes usually come in name/value pairs like: name="value"</li>
+	</ul>
+
+	
+
+
+
+
+The src Attribute
+HTML images are defined with the <img> tag.
+
+The filename of the image source is specified in the src attribute:
+
+The width and height Attributes
+Images in HTML have a set of size attributes, which specifies the width and height of the image:
+
+The image size is specified in pixels: width="500" means 500 pixels wide.
+
+The alt Attribute
+The alt attribute specifies an alternative text to be used, when an image cannot be displayed.
+
+The value of the attribute can be read by screen readers. This way, someone "listening" to the webpage, e.g. a vision impaired person, can "hear" the element.
+
+Example
+<img src="img_girl.jpg" width="500" height="600" alt="Girl with a jacket">
+The alt attribute is also useful if the image does not exist:
+
+
+<h3>HTML Documents</h3>
+<p>All HTML documents must start with a document type declaration: &lt;!DOCTYPE html&gt;.</p>
+<p>The HTML document itself begins with &lt;html&gt; and ends with &lt;/html&gt;.</p>
+<br>
+
+<h3>The &lt;!DOCTYPE&gt; Declaration</h3>
+<p>The &lt;!DOCTYPE&gt; declaration represents the document type, and helps browsers to display web pages correctly.</p>
+<p>It must only appear once, at the top of the page (before any HTML tags).</p>
+<br>
+
+<h3>HTML Head</h3>
+<p>The &lt;head&gt; element is a container for metadata (data about data) and is placed between the &lt;html&gt; tag and the &lt;body&gt; tag.</p>
+<p>HTML metadata is data about the HTML document. Metadata is not displayed.</p>
+<p>Metadata typically define the document title, character set, styles, links, scripts, and other meta information.</p>
+<p>The following tags describe metadata: &lt;title&gt;, &lt;style&gt;, &lt;meta&gt;, &lt;link&gt;, &lt;script&gt;, and &lt;base&gt;.</p>
+
+<h4>The HTML &lt;title&gt; Element</h4>
+<p>The &lt;title&gt; element defines the title of the document, and is required in all HTML/XHTML documents.</p>
+<p>The &lt;title&gt; element:</p>
+<ul>
+	<li>defines a title in the browser tab</li>
+	<li>provides a title for the page when it is added to favorites</li>
+	<li>displays a title for the page in search engine results</li>
+</ul>
+
+<h4>The HTML &lt;style&gt; Element</h4>
+<p>The &lt;style&gt; element is used to define style information for a single HTML page.</p>
+
+<h4>The HTML &lt;link&gt; Element</style>
+<p>The &lt;link&gt; element is used to link to external style sheets.</p>
+
+<h4>The HTML <meta> Element</h4>
+The <meta> element is used to specify which character set is used, page description, keywords, author, and other metadata.
+
+Metadata is used by browsers (how to display content), by search engines (keywords), and other web services.
+
+Define the character set used:
+
+<meta charset="UTF-8">
+Define a description of your web page:
+
+<meta name="description" content="Free Web tutorials">
+Define keywords for search engines:
+
+<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+Define the author of a page:
+
+<meta name="author" content="John Doe">
+Refresh document every 30 seconds:
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+HTML5 introduced a method to let web designers take control over the viewport, through the <meta> tag.
+
+The viewport is the user's visible area of a web page. It varies with the device, and will be smaller on a mobile phone than on a computer screen.
+
+A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+
+<h4>The HTML <base> Element</h4>
+The <base> element specifies the base URL and base target for all relative URLs in a page:
+
+Example
+<base href="https://www.w3schools.com/images/" target="_blank">
+
+
+The visible part of the HTML document is between <body> and </body>.
+
+
+
+Note: Only the content inside the <body> section is displayed in a browser.
+
+The <body> element defines the document body.
+
+It has a start tag <body> and an end tag </body>.
+
+
+</article>
