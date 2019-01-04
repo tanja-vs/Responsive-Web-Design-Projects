@@ -73,7 +73,7 @@ body {
 	height: auto;
 }	
 
-#jsPM, #webDev {
+#jsPM, #webDev, #htmlText {
 	display: none;
 }
 
@@ -89,6 +89,10 @@ body {
 .listsStrong {
 	font-weight: bold;
 	color: #ffa378;
+}
+
+.tags {
+	color: #693cc2;
 }
 
 .answers {
